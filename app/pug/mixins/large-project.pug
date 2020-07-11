@@ -1,0 +1,9 @@
+mixin large-project(imgsrc, alt, title, subtitle)
+
+    .large-project
+        .large-project-img-wrapper
+            img(src="img/portfolio/" + imgsrc, alt="" + alt)
+            .project-large-hover
+                a.project-large-button(href="#") Смотреть проект
+        a.large-project-title(href="#")= title 
+        h4.large-project-subtitle= subtitle

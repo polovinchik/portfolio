@@ -1,0 +1,31 @@
+nav.nav
+    a.nav__logo(href="index.html")
+        span.underline-medium ДВ
+    ul.nav-list
+        a.nav-list__item(href="index.html") Главная
+        a.nav-list__item(href="#portfolio") Работы
+        a.nav-list__item(href="#") Контакты
+    ul.nav-social
+        a(href="#" target="_blank").nav-social__item.nav-social__item--linkedin
+            <i class="fab fa-linkedin-in"></i>
+        a(href="https://github.com/polovinchik" target="_blank").nav-social__item.nav-social__item--github
+            <i class="fab fa-github"></i>
+        a(href="https://vk.com/polovinchiklol" target="_blank").nav-social__item.nav-social__item--vk
+            <i class="fab fa-vk"></i>
+    .nav-menu-icon-wrapper
+        .nav-menu-icon
+    .menu
+        .nav-menu-icon-exit
+        .nav__logo
+            span.underline-medium ДВ
+        ul.menu-list
+            li.menu-list__item
+                a(href="#about").menu-list__link Услуги
+            li.menu-list__item
+                a(href="#portfolio").menu-list__link Работы
+            li.menu-list__item
+                a(href="#").menu-list__link Контакты
+        include _social.pug
+        a.menu__mail(href="mailto:lapushkiteam@gmail.com") lapushkiteam@gmail.com
+
+        

@@ -1,0 +1,34 @@
+header.header
+    .overlay
+    include ../sections/_navigation.pug
+    .container
+        .header-biography
+            .header-biography-img-wrapper
+                img.header-biography-img(src="img/header/computer.jpeg", alt="Author")
+            .header-biography-content
+                h1.title-large
+                    span.underline-large Дмитрий 
+                    span.underline-large Вишневский
+                .header-biography__text
+                    p Верстальщик сайтов, веб-разработчик. Оперативная верстка. Работаю с соблюдением сроков и выполнением ТЗ. 
+                .header-biography-buttons
+                    a(href="#about").yellow-button Познакомиться
+                    a(href="#").black-button Контакты
+    .header-img-wrapper
+        img(src="img/header/header-img.png", alt="back")
+    .container
+        .header-about(id="about")
+            .header-skills
+                h3.header-about__title Что я умею:
+                ul.header-skills-list
+                    li.header-skills__item Pixel perfect, полное соответствие макету
+                    li.header-skills__item Верстаю с сеткой или без
+                    li.header-skills__item Адаптивная верстка под мобильные устройства
+                    li.header-skills__item Оптимизация по retina экраны
+                    li.header-skills__item С Bootstrap и без него
+                .button-wrapper
+                    a(href="#portfolio").yellow-button Смотреть работы
+            .header-social
+                h3.header-about__title На связи:
+                include _social.pug
+                a.header-social__mail(href="mailto:lapushkiteam@gmail.com") lapushkiteam@gmail.com

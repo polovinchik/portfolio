@@ -1,0 +1,318 @@
+.nav {
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 20px 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    padding: 20px 30px 75px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 60px 0px 145px;
+  }
+}
+.nav__logo {
+  position: relative;
+
+  font-size: 43px;
+  font-weight: 800;
+
+  &:hover {
+    .underline-medium::after {
+      height: 38px;
+
+      border-radius: 20px 5px 20px 0;
+      @media (min-width: 768px) {
+        height: 40px;
+
+        border-radius: 20px 5px 20px 0;
+      }
+      @media (min-width: 1200px) {
+        height: 38px;
+
+        border-radius: 20px 5px 20px 0;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 42px;
+  }
+}
+.menu .nav__logo {
+  margin-bottom: 30px;
+}
+.nav-list {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: flex;
+
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+.nav-list__item {
+  position: relative;
+  z-index: 10;
+
+  margin-right: 80px;
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 4px;
+    left: -4px;
+    z-index: -1;
+
+    width: 0;
+    height: 5px;
+
+    background-color: @underline;
+
+    transition: width 0.5s ease-out;
+  }
+
+  &:hover:after {
+    width: ~"calc(100% + 8px)";
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.nav-social {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.nav-social__item {
+  position: relative;
+
+  margin-right: 20px;
+
+  transition: color 0.5s;
+
+  line-height: 1;
+
+  font-size: 32px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.nav-social__item--github {
+  &:hover {
+    color: #6cc644;
+  }
+}
+.nav-social__item--vk {
+  &:hover {
+    color: #45668e;
+  }
+}
+.nav-social__item--linkedin {
+  &:hover {
+    color: #8d6cab;
+  }
+}
+.nav .underline:after {
+  bottom: 8px;
+  height: 10px;
+}
+.nav-menu-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  width: 50px;
+
+  border-radius: 50%;
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+.nav-menu-icon {
+  position: relative;
+  z-index: 1;
+
+  width: 40px;
+  height: 5px;
+
+  background-color: black;
+
+  &::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 10px;
+
+    width: 40px;
+    height: 5px;
+    background-color: black;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 10px;
+
+    width: 40px;
+    height: 5px;
+    background-color: black;
+  }
+}
+.nav-menu-icon-exit {
+  position: absolute;
+  top: 32px;
+  right: 33px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    position: absolute;
+
+    content: "";
+    display: block;
+
+    width: 40px;
+    height: 5px;
+
+    transform: rotate(-45deg);
+
+    background-color: black;
+  }
+  &::after {
+    position: absolute;
+
+    content: "";
+    display: block;
+
+    width: 40px;
+    height: 5px;
+
+    transform: rotate(45deg);
+
+    background-color: black;
+  }
+}
+.menu {
+  padding: 20px 30px 40px 30px;
+  transform: translateX(100%);
+  transition: 1s;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 11;
+
+  width: 320px;
+  height: 100%;
+
+  background-color: white;
+}
+
+.menu--active {
+  transform: translateX(0);
+}
+.menu-list {
+  margin-bottom: 40px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+.menu-list__item {
+  position: relative;
+
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.menu-list__link {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 1px;
+
+    height: 1px;
+    width: 100%;
+    background-color: black;
+
+    transition: 0.4s;
+  }
+
+  &:hover {
+    color: #039be5;
+    &::after {
+      background-color: #039be5;
+    }
+  }
+
+  &:active {
+    color: @red;
+    &::after {
+      background-color: @red;
+    }
+  }
+}
+.nav .social {
+  margin-bottom: 30px;
+}
+
+.menu__mail {
+  position: relative;
+
+  font-size: 18px;
+  color: #039be5;
+
+  transition: 0.4s;
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 1px;
+
+    height: 1px;
+    width: 100%;
+    background-color: #039be5;
+
+    transition: 0.4s;
+  }
+
+  &:active {
+    color: @red;
+    &::after {
+      background-color: @red;
+    }
+  }
+}
