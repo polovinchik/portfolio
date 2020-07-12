@@ -23,6 +23,14 @@ $(document).ready(function () {
     $("body").removeClass("hidden");
   });
 
+  // Клик на Лого - удалить все классы
+
+  $(".nav__logo").click(function (event) {
+    $(".overlay").removeClass("overlay--active");
+    $(".menu").removeClass("menu--active");
+    $("body").removeClass("hidden");
+  });
+
   // Клик на Оверлей
 
   $(".overlay").click(function (event) {
@@ -81,4 +89,9 @@ $(document).ready(function () {
         .removeClass("small-project-title--active");
     }
   );
+
+  // Фильтрация работ
+
+  // В мечтах о.о
+
 });

@@ -2,16 +2,14 @@ section.portfolio(id="portfolio")
     .container
         h2.title-medium
             span.underline-title Портфолио
-        .portfolio-sort-list
-            h4.portfolio-sort__item.portfolio-sort__item--active Все работы
-            h4.portfolio-sort__item Bootstrap
-            h4.portfolio-sort__item WordPress
-            h4.portfolio-sort__item Frontend
-        .portfolio-projects
-            .projects-row
+        //- .portfolio-sort-list
+            button.portfolio-sort__item.portfolio-sort__item--active Все работы
+            button.portfolio-sort__item Bootstrap
+            button.portfolio-sort__item WordPress
+            button.portfolio-sort__item Frontend
+        .portfolio-projects(id="portfolio-projects")
                 +large-project("unit.jpeg", "Unit", "Верстка Unit", "Верстка лендинга")
-                +large-project("forest.jpeg", "Forest Trevel", "Верстка Forest Travel", "Верстка многостраничного сайта.")
-            .projects-row
+                +large-project("forest.jpeg", "Forest Trevel", "Верстка Форест Тревел", "Верстка многостраничного сайта.")
                 +small-project("example.jpg", "Какой-то проект", "Верстка NN", "Верстка NN")
                 +small-project("example.jpg", "Какой-то проект", "Верстка NN", "Верстка NN")
                 +small-project("example.jpg", "Какой-то проект", "Верстка NN", "Верстка NN")

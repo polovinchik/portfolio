@@ -10,7 +10,6 @@
     width: ~"calc(50% - 16px)";
 
     padding-bottom: 20px;
-    margin-bottom: 0;
   }
 
   @media (min-width: 1200px) {
@@ -29,7 +28,7 @@
   @media (min-width: 768px) {
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: 1200px) {
@@ -38,15 +37,17 @@
 }
 
 .large-project-title {
+  display: inline-block;
+
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   font-size: 22px;
   font-weight: 700;
 
-  transition: 0.8s;
-
   &:after {
+    transition: 0.8s;
+
     position: absolute;
     content: "";
     display: block;
@@ -62,13 +63,13 @@
   }
 
   @media (min-width: 768px) {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     font-size: 24px;
   }
 
   @media (min-width: 1200px) {
-    margin-bottom: 0;
+    margin-bottom: 5px;
 
     font-size: 32px;
   }
