@@ -94,4 +94,15 @@ $(document).ready(function () {
 
   // В мечтах о.о
 
+  // Ховер для Как я работаю
+  $(".work-plan-card").hover(
+    function () {
+      $(this).find($(".work-plan-title")).addClass("work-plan-title--active");
+    },
+    function () {
+      $(this)
+        .find($(".work-plan-title"))
+        .removeClass("work-plan-title--active");
+    }
+  );
 });

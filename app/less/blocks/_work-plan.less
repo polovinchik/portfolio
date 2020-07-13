@@ -1,0 +1,59 @@
+.work-plan {
+  padding: 60px 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 80px 0 90px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 134px 0 35px;
+
+    background-image: url(../img/work-plan/how-bg.jpg);
+    background-position: center;
+  }
+}
+.work-plan .title-medium {
+  font-size: 36px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 52px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 64px;
+  }
+}
+.work-plan .underline-title::after {
+  bottom: 5px;
+}
+
+.work-plan-cards {
+  position: relative;
+  padding-top: 47px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding-top: 155px;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+
+      position: absolute;
+      left: 50%;
+      top: 76px;
+      height: 56px;
+      transform: translateX(-50%);
+      
+      width: 4px;
+
+      border-radius: 2px;
+      background-color: #dfedf4;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 158px;
+  }
+}

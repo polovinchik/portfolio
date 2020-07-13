@@ -1,0 +1,8 @@
+mixin work-plan-card(img, title, text, time)
+    .work-plan-card
+        .work-plan-img-wrapper
+            img(src="img/work-plan/" + img , alt="img").work-plan-img
+        .work-plan-content
+            .work-plan-title= title
+            .work-plan-text= text
+            .work-plan-time= time

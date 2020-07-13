@@ -1,0 +1,168 @@
+.work-plan-card {
+  position: relative;
+
+  max-width: 100%;
+
+  margin-bottom: 40px;
+  margin-left: auto;
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+    transform: translateX(-37px);
+    &:nth-child(2n + 1) {
+      margin-left: unset;
+      transform: translateX(37px);
+    }
+    &:nth-child(2n + 1) {
+      .work-plan-img-wrapper {
+        right: 0;
+        left: unset;
+      }
+    }
+    &:nth-child(2n + 1) {
+      .work-plan-content {
+        padding-right: 100px;
+        padding-left: 0;
+      }
+    }
+    &:nth-child(2n + 1) {
+      .work-plan-content {
+        text-align: right;
+      }
+    }
+    &:nth-child(2n + 1)::after {
+      right: 37px;
+      left: unset;
+      transform: translate(50%, 20px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 50%;
+  }
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 74px;
+    bottom: 0;
+    left: 37px;
+    transform: translate(-50%, 20px);
+
+    width: 4px;
+
+    border-radius: 2px;
+    background-color: #dfedf4;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+.work-plan-img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 74px;
+  height: 74px;
+
+  border-radius: 28px;
+
+  box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35);
+}
+.work-plan-img {
+  width: 42px;
+  height: 42px;
+}
+.work-plan-content {
+  padding: 3px 0px 25px 100px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 20px;
+    padding-top: 25px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-bottom: 42px;
+    padding-top: 22px;
+  }
+}
+.work-plan-title {
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  @media (min-width: 768px) {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 11px;
+
+    font-size: 26px;
+
+    &::after {
+      transition: background-color 0.3s;
+      z-index: -1;
+      content: "";
+      position: absolute;
+      display: block;
+      height: 8px;
+      bottom: 4px;
+      left: -5px;
+      right: -5px;
+      background-color: @underline;
+    }
+  }
+}
+.work-plan-title--active {
+  @media (min-width: 1200px) {
+    &::after {
+      background-color: @red;
+    }
+  }
+}
+.work-plan-text {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+
+  margin-bottom: 5px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 11px;
+
+    font-size: 16px;
+    line-height: 1.33;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 12px;
+
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+.work-plan-time {
+  font-size: 14px;
+  font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}
