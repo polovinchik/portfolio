@@ -1,0 +1,38 @@
+section.contacts
+    .container
+        h2.title-medium 
+            span.underline-title Контакты
+        .contacts-wrapper
+            .contacts-content
+                .contacts-img 
+                    img(src="img/contacts/contacts-bg.png", alt="dots")
+                .contacts-text
+                    p Если вы ищите специалиста по верстке сайтов, front-end разработчика в команду или для работы над проектом —  напишите мне.
+                .contacts-communication
+                    .contacts-communication-item
+                        .contacts-communication__title Email
+                        .contacts-communication__link
+                            a lapushkiteam@gmail.com
+                    .contacts-communication-item
+                        .contacts-communication__title Skype
+                        .contacts-communication__link
+                            a Кто им пользуется?
+                    .contacts-communication-item
+                        .contacts-communication__title Телефон
+                        .contacts-communication__info +7 (800) 555-35-35
+                    .contacts-communication-item
+                        .contacts-communication__title Адрес
+                        .contacts-communication__info Россия, Санкт-Петербург
+                include _social.pug
+            form.contacts-form
+                .input-row
+                    input(type="email").contacts-input
+                    span.fake-placeholder Ваш Email
+                .input-row
+                    input(type="text").contacts-input
+                    span.fake-placeholder Тема письма
+                .input-row
+                    textarea(rows="5" type="text").contacts-input
+                    span.fake-placeholder Сообщение
+                button.yellow-button Отправить
+

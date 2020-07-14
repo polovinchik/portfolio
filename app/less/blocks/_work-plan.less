@@ -25,6 +25,13 @@
 }
 .work-plan .underline-title::after {
   bottom: 5px;
+  @media (min-width: 768px) {
+    bottom: 8px;
+  }
+
+  @media (min-width: 1200px) {
+    bottom: 11px;
+  }
 }
 
 .work-plan-cards {
@@ -45,7 +52,7 @@
       top: 76px;
       height: 56px;
       transform: translateX(-50%);
-      
+
       width: 4px;
 
       border-radius: 2px;

@@ -1,0 +1,273 @@
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: @bgcolor;
+
+  @media (min-width: 768px) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .title-medium {
+    margin-bottom: 47px;
+
+    text-align: center;
+    @media (min-width: 768px) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 67px;
+    }
+  }
+}
+
+.contacts-img {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translatex(-80%);
+  }
+}
+.contacts-wrapper {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.contacts-content {
+  position: relative;
+
+  margin-bottom: 50px;
+  @media (min-width: 768px) {
+    max-width: 340px;
+
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 555px;
+
+    padding-top: 23px;
+  }
+}
+.contacts-text {
+  margin-bottom: 23px;
+  @media (min-width: 768px) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 42px;
+  }
+}
+.contacts-text p {
+  font-size: 16px;
+  line-height: 1.625;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.556;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+.contacts-communication {
+  margin-bottom: 35px;
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 45px;
+  }
+}
+.contacts-communication-item {
+  margin-bottom: 17px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+  }
+}
+
+.contacts-communication__title {
+  margin-bottom: 5px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+
+    font-size: 20px;
+  }
+}
+.contacts-communication__info {
+  font-size: 18px;
+
+  color: rgb(150, 150, 157);
+  line-height: 1.2;
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+
+    min-width: 320px;
+  }
+}
+.contacts-communication__link {
+  font-size: 18px;
+  line-height: 1.2;
+  color: rgb(3, 155, 229);
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+
+    min-width: 320px;
+  }
+  a {
+    position: relative;
+    &:hover {
+      &::after {
+        background-color: rgb(3, 155, 229);
+      }
+    }
+    &::after {
+      transition: 0.3s;
+      content: "";
+      display: block;
+
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      bottom: 0;
+
+      height: 1px;
+      background-color: inherit;
+    }
+  }
+}
+
+.contacts-form {
+  width: 100%;
+
+  padding: 50px 16px 40px 16px;
+
+  background-color: white;
+  box-shadow: 0px 28px 100px 0px rgb(194, 219, 235);
+  @media (min-width: 768px) {
+    width: 340px;
+
+    padding: 57px 25px 40px 25px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 520px;
+
+    padding: 69px 65px 40px 45px;
+  }
+}
+
+.input-row {
+  position: relative;
+
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 48px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: @bgcolor;
+  }
+  &:last-of-type {
+    margin-bottom: 0px;
+
+    @media (min-width: 1200px) {
+      margin-bottom: 15px;
+    }
+  }
+}
+.input-row input {
+  width: 100%;
+  padding: 15px 5px 15px 5px;
+
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.input-row textarea {
+  width: 100%;
+  padding: 15px 5px 15px 5px;
+
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  line-height: 1.2;
+
+  resize: none;
+  overflow: hidden;
+}
+.fake-placeholder {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+
+  pointer-events: none;
+
+  font-size: 20px;
+  color: rgb(188, 188, 188);
+  font-weight: 700;
+  line-height: 1.2;
+
+  transition: 1s;
+}
+.fake-placeholder--active {
+  color: rgb(237, 150, 38);
+  font-size: 16px;
+
+  top: -10px;
+}
+.contacts .yellow-button {
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    width: auto;
+  }
+}
